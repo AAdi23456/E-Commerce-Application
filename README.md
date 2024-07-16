@@ -103,7 +103,7 @@ The server will start on `http://localhost:3000`.
   "username": "johndoe",
   "email": "johndoe@example.com",
   "password": "password123",
-  "role": "seller" // or "buyer"
+  "role": "SELLER" // or "BUYER"
 }
 ```
 
