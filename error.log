@@ -1,0 +1,1 @@
+{"level":"error","message":"Error editing product: ReferenceError: data is not defined\n    at editProduct (D:\\ecommerce-app\\controllers\\sellerController.js:55:69)","service":"user-service","timestamp":"2024-07-16 18:25:38"}

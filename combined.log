@@ -1,0 +1,104 @@
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:08:46"}
+{"level":"info","message":"Incoming request: POST /auth/signup","service":"user-service","timestamp":"2024-07-16 18:13:17"}
+{"level":"info","message":"User signed up: buyer1@example.com","service":"user-service","timestamp":"2024-07-16 18:13:20"}
+{"level":"info","message":"Incoming request: POST /auth/signup","service":"user-service","timestamp":"2024-07-16 18:13:23"}
+{"0":"b","1":"u","10":"m","11":"p","12":"l","13":"e","14":".","15":"c","16":"o","17":"m","2":"y","3":"e","4":"r","5":"1","6":"@","7":"e","8":"x","9":"a","level":"info","message":"Email is already present","service":"user-service","timestamp":"2024-07-16 18:13:23"}
+{"level":"info","message":"Incoming request: POST /auth/signup","service":"user-service","timestamp":"2024-07-16 18:13:38"}
+{"0":"b","1":"u","10":"m","11":"p","12":"l","13":"e","14":".","15":"c","16":"o","2":"y","3":"e","4":"r","5":"1","6":"@","7":"e","8":"x","9":"a","level":"info","message":"Username is already present","service":"user-service","timestamp":"2024-07-16 18:13:38"}
+{"level":"info","message":"Incoming request: POST /auth/signup","service":"user-service","timestamp":"2024-07-16 18:14:03"}
+{"level":"info","message":"User signed up: seller1@example.com","service":"user-service","timestamp":"2024-07-16 18:14:03"}
+{"level":"info","message":"Incoming request: POST /seller/products","service":"user-service","timestamp":"2024-07-16 18:14:54"}
+{"level":"info","message":"Incoming request: POST /auth/login","service":"user-service","timestamp":"2024-07-16 18:15:40"}
+{"level":"info","message":"User logged in: seller1@example.com","service":"user-service","timestamp":"2024-07-16 18:15:40"}
+{"level":"info","message":"Incoming request: POST /seller/products","service":"user-service","timestamp":"2024-07-16 18:16:38"}
+{"level":"info","message":"Product added: T-shirt by user 2","service":"user-service","timestamp":"2024-07-16 18:16:38"}
+{"level":"info","message":"Incoming request: POST /seller/products","service":"user-service","timestamp":"2024-07-16 18:16:47"}
+{"level":"info","message":"Product added: T-shirt by user 2","service":"user-service","timestamp":"2024-07-16 18:16:47"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:24:13"}
+{"level":"info","message":"Incoming request: POST /seller/products","service":"user-service","timestamp":"2024-07-16 18:24:21"}
+{"level":"info","message":"Product added: T-shirt by user 2","service":"user-service","timestamp":"2024-07-16 18:24:21"}
+{"level":"info","message":"Incoming request: PUT /seller/products/3","service":"user-service","timestamp":"2024-07-16 18:24:34"}
+{"level":"info","message":"Product edited: 3 by user undefined","service":"user-service","timestamp":"2024-07-16 18:24:35"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:25:13"}
+{"level":"info","message":"Incoming request: PUT /seller/products/3","service":"user-service","timestamp":"2024-07-16 18:25:15"}
+{"level":"info","message":"Product edited: 3 by user undefined","service":"user-service","timestamp":"2024-07-16 18:25:16"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:25:36"}
+{"level":"info","message":"Incoming request: PUT /seller/products/3","service":"user-service","timestamp":"2024-07-16 18:25:37"}
+{"level":"info","message":"Product edited: 3 by user undefined","service":"user-service","timestamp":"2024-07-16 18:25:38"}
+{"level":"error","message":"Error editing product: ReferenceError: data is not defined\n    at editProduct (D:\\ecommerce-app\\controllers\\sellerController.js:55:69)","service":"user-service","timestamp":"2024-07-16 18:25:38"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:25:56"}
+{"level":"info","message":"Incoming request: PUT /seller/products/3","service":"user-service","timestamp":"2024-07-16 18:25:58"}
+{"level":"info","message":"Product edited: 3 by user undefined","service":"user-service","timestamp":"2024-07-16 18:25:59"}
+{"level":"info","message":"Incoming request: DELETE /seller/products/3","service":"user-service","timestamp":"2024-07-16 18:26:09"}
+{"level":"info","message":"Product deleted: 3 by user undefined","service":"user-service","timestamp":"2024-07-16 18:26:09"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:28:05"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:28:39"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:29:45"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:30:19"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:30:49"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:30:52"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:30:54"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:31:12"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:31:14"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:31:25"}
+{"level":"info","message":"Incoming request: DELETE /seller/products/3","service":"user-service","timestamp":"2024-07-16 18:31:34"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:31:57"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:32:02"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:32:04"}
+{"level":"info","message":"Incoming request: DELETE /seller/products/3","service":"user-service","timestamp":"2024-07-16 18:32:11"}
+{"level":"info","message":"Incoming request: DELETE /seller/products/2","service":"user-service","timestamp":"2024-07-16 18:32:18"}
+{"level":"info","message":"Product deleted: 2 by user undefined","service":"user-service","timestamp":"2024-07-16 18:32:18"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:32:50"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:16"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:20"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:21"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:24"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:40"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:43"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:51"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:33:56"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:34:03"}
+{"level":"info","message":"Incoming request: POST /seller/products/","service":"user-service","timestamp":"2024-07-16 18:34:11"}
+{"level":"info","message":"Product added: T-shirt by user 2","service":"user-service","timestamp":"2024-07-16 18:34:12"}
+{"level":"info","message":"Incoming request: POST /auth/signup","service":"user-service","timestamp":"2024-07-16 18:34:41"}
+{"0":"b","1":"u","10":"m","11":"p","12":"l","13":"e","14":".","15":"c","16":"o","17":"m","2":"y","3":"e","4":"r","5":"1","6":"@","7":"e","8":"x","9":"a","level":"info","message":"Email is already present","service":"user-service","timestamp":"2024-07-16 18:34:42"}
+{"level":"info","message":"Incoming request: POST /auth/signup","service":"user-service","timestamp":"2024-07-16 18:34:49"}
+{"level":"info","message":"User signed up: buyer1@example.cm","service":"user-service","timestamp":"2024-07-16 18:34:49"}
+{"level":"info","message":"Incoming request: POST /auth/login","service":"user-service","timestamp":"2024-07-16 18:34:58"}
+{"level":"info","message":"User logged in: buyer1@example.cm","service":"user-service","timestamp":"2024-07-16 18:34:58"}
+{"level":"info","message":"Incoming request: GET /buyer/products?name=T-shirt","service":"user-service","timestamp":"2024-07-16 18:36:50"}
+{"level":"info","message":"Products searched with name: T-shirt and category: undefined","service":"user-service","timestamp":"2024-07-16 18:36:51"}
+{"level":"info","message":"Incoming request: GET /buyer/products?category=Clotheee","service":"user-service","timestamp":"2024-07-16 18:37:11"}
+{"level":"info","message":"Products searched with name: undefined and category: Clotheee","service":"user-service","timestamp":"2024-07-16 18:37:11"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:37:44"}
+{"level":"info","message":"Incoming request: POST /buyer/products/4","service":"user-service","timestamp":"2024-07-16 18:38:11"}
+{"level":"info","message":"Incoming request: POST /buyer/cart","service":"user-service","timestamp":"2024-07-16 18:38:32"}
+{"level":"info","message":"Incoming request: POST /buyer/cart","service":"user-service","timestamp":"2024-07-16 18:38:41"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:39:11"}
+{"level":"info","message":"Incoming request: POST /buyer/cart","service":"user-service","timestamp":"2024-07-16 18:39:20"}
+{"level":"info","message":"Incoming request: POST /buyer/cart","service":"user-service","timestamp":"2024-07-16 18:39:27"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:49:20"}
+{"level":"info","message":"Incoming request: POST /buyer/cart","service":"user-service","timestamp":"2024-07-16 18:49:33"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:50:00"}
+{"level":"info","message":"Incoming request: POST /buyer/cart","service":"user-service","timestamp":"2024-07-16 18:50:03"}
+{"level":"info","message":"Product 1 added to cart by user 2","service":"user-service","timestamp":"2024-07-16 18:50:03"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:51:54"}
+{"level":"info","message":"Incoming request: POST /buyer/cart","service":"user-service","timestamp":"2024-07-16 18:51:59"}
+{"level":"info","message":"Product 1 added to cart by user 2","service":"user-service","timestamp":"2024-07-16 18:52:00"}
+{"level":"info","message":"Incoming request: DELETE /buyer/cart/2","service":"user-service","timestamp":"2024-07-16 18:52:09"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:52:22"}
+{"level":"info","message":"Incoming request: DELETE /buyer/cart/2","service":"user-service","timestamp":"2024-07-16 18:52:22"}
+{"level":"info","message":"Product 2 removed from cart by user undefined","service":"user-service","timestamp":"2024-07-16 18:52:23"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:55:19"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:55:24"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:55:34"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:55:53"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:56:18"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:56:24"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:56:27"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:56:39"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:56:46"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:56:54"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:58:43"}
+{"level":"info","message":"Incoming request: GET /buyer/cart/","service":"user-service","timestamp":"2024-07-16 18:58:54"}
+{"level":"info","message":"Cart items retrieved for user 2","service":"user-service","timestamp":"2024-07-16 18:58:55"}
