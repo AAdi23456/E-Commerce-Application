@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Application Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #eef;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #eef;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .endpoint {
+            background-color: #def;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .sample-input, .sample-output {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>E-Commerce Application</h1>
+    <p>This is a simple e-commerce application with user authentication, built using Node.js, Express.js, and PostgreSQL. It allows users to sign up as either sellers or buyers, and provides functionality for sellers to manage products and buyers to search for products and manage their cart.</p>
+
+    <h2>Tech Stack</h2>
+    <ul>
+        <li><strong>Backend:</strong> Node.js, Express.js</li>
+        <li><strong>Database:</strong> PostgreSQL</li>
+        <li><strong>ORM:</strong> Prisma</li>
+        <li><strong>Authentication:</strong> JSON Web Tokens (JWT)</li>
+        <li><strong>Logging:</strong> Winston</li>
+        <li><strong>Input Validation:</strong> express-validator</li>
+    </ul>
+
+    <h2>Features</h2>
+    <h3>User Authentication</h3>
+    <ul>
+        <li><strong>Sign-Up:</strong> Users can sign up as either a seller or a buyer.</li>
+        <li><strong>Login:</strong> Users can log in to their account.</li>
+    </ul>
+
+    <h3>Seller Functionality</h3>
+    <ul>
+        <li><strong>Add Products:</strong> Sellers can add new products with details such as name, category, description, price, and discount.</li>
+        <li><strong>Edit Products:</strong> Sellers can edit their existing products.</li>
+        <li><strong>Delete Products:</strong> Sellers can delete their products.</li>
+    </ul>
+
+    <h3>Buyer Functionality</h3>
+    <ul>
+        <li><strong>Search Products:</strong> Buyers can search for products by name or category.</li>
+        <li><strong>Add to Cart:</strong> Buyers can add products to their cart.</li>
+        <li><strong>Remove from Cart:</strong> Buyers can remove products from their cart.</li>
+    </ul>
+
+    <h2>Prerequisites</h2>
+    <ul>
+        <li>Node.js</li>
+        <li>PostgreSQL</li>
+    </ul>
+
+    <h2>Getting Started</h2>
+    <h3>1. Clone the repository</h3>
+    <pre><code>git clone https://github.com/AAdi23456/E-Commerce-Application
+cd ecommerce-app</code></pre>
+
+    <h3>2. Install Dependencies</h3>
+    <pre><code>npm install</code></pre>
+
+    <h3>3. Set Up Environment Variables</h3>
+    <p>Create a <code>.env</code> file in the root directory and add the following environment variables:</p>
+    <pre><code>DATABASE_URL=postgres://your_db_username:your_db_password@localhost:5432/your_db_name
+JWT_SECRET=your_jwt_secret</code></pre>
+    <p>Replace <code>your_db_username</code>, <code>your_db_password</code>, <code>your_db_name</code>, and <code>your_jwt_secret</code> with your actual database credentials and JWT secret.</p>
+
+    <h3>4. Set Up PostgreSQL</h3>
+    <p>Ensure PostgreSQL is installed and running on your machine. Create a database for the application.</p>
+
+    <h3>5. Set Up Prisma</h3>
+    <p>Generate the Prisma client:</p>
+    <pre><code>npx prisma generate</code></pre>
+    <p>Run the migrations to set up the database schema:</p>
+    <pre><code>npx prisma migrate dev --name init</code></pre>
+
+    <h3>6. Start the Application</h3>
+    <pre><code>npm run dev</code></pre>
+    <p>The server will start on <code>http://localhost:3000</code>.</p>
+
+    <h2>API Endpoints</h2>
+    <h3>Authentication</h3>
+
+    <div class="endpoint">
+        <h4>Sign-Up</h4>
+        <p><strong>Endpoint:</strong> <code>POST https://e-commerce-application-g88v.onrender.com/auth/signup</code></p>
+        <p><strong>Description:</strong> Users can sign up as either a seller or a buyer.</p>
+        <div class="sample-input">
+            <h5>Sample Input:</h5>
+            <pre><code>{
+    "username": "johndoe",
+    "email": "johndoe@example.com",
+    "password": "password123",
+    "role": "SELLER" // or "BUYER"
+}</code></pre>
+        </div>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>{
+    "message": "User registered successfully"
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h4>Login</h4>
+        <p><strong>Endpoint:</strong> <code>POST https://e-commerce-application-g88v.onrender.com/auth/login</code></p>
+        <p><strong>Description:</strong> Users can log in to their account.</p>
+        <div class="sample-input">
+            <h5>Sample Input:</h5>
+            <pre><code>{
+    "email": "johndoe@example.com",
+    "password": "password123"
+}</code></pre>
+        </div>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>{
+    "token": "jwt_token_here"
+}</code></pre>
+        </div>
+    </div>
+
+    <h3>Seller Routes</h3>
+
+    <div class="endpoint">
+        <h4>Add Product</h4>
+        <p><strong>Endpoint:</strong> <code>POST https://e-commerce-application-g88v.onrender.com/seller/products</code> (Authenticated)</p>
+        <p><strong>Description:</strong> Sellers can add new products.</p>
+        <div class="sample-input">
+            <h5>Sample Input:</h5>
+            <pre><code>{
+    "name": "Product Name",
+    "category": "Category",
+    "description": "Product Description",
+    "price": 99.99,
+    "discount": 10
+}</code></pre>
+        </div>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>{
+    "message": "Product created successfully"
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h4>Edit Product</h4>
+        <p><strong>Endpoint:</strong> <code>PUT https://e-commerce-application-g88v.onrender.com/seller/products/:id</code> (Authenticated)</p>
+        <p><strong>Description:</strong> Sellers can edit their existing products.</p>
+        <div class="sample-input">
+            <h5>Sample Input:</h5>
+            <pre><code>{
+    "name": "Updated Product Name",
+    "category": "Updated Category",
+    "description": "Updated Product Description",
+    "price": 89.99,
+    "discount": 15
+}</code></pre>
+        </div>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>{
+    "message": "Product updated successfully"
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h4>Delete Product</h4>
+        <p><strong>Endpoint:</strong> <code>DELETE https://e-commerce-application-g88v.onrender.com/seller/products/:id</code> (Authenticated)</p>
+        <p><strong>Description:</strong> Sellers can delete their products.</p>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>{
+    "message": "Product deleted successfully"
+}</code></pre>
+        </div>
+    </div>
+
+    <h3>Buyer Routes</h3>
+
+    <div class="endpoint">
+        <h4>Search Products</h4>
+        <p><strong>Endpoint:</strong> <code>GET https://e-commerce-application-g88v.onrender.com/buyer/products</code></p>
+        <p><strong>Description:</strong> Buyers can search for products by name or category.</p>
+        <div class="sample-input">
+            <h5>Sample Input:</h5>
+            <pre><code>{
+    https://e-commerce-application-g88v.onrender.com/buyer/products?name=T-shirt
+}</code></pre>
+        </div>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>[
+    {
+        "id": 1,
+        "name": "Product Name",
+        "category": "Category",
+        "description": "Product Description",
+        "price": 99.99,
+        "discount": 10
+    },
+    {
+        "id": 2,
+        "name": "Another Product",
+        "category": "Category",
+        "description": "Another Product Description",
+        "price": 79.99,
+        "discount": 5
+    }
+]</code></pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h4>Add to Cart</h4>
+        <p><strong>Endpoint:</strong> <code>POST https://e-commerce-application-g88v.onrender.com/buyer/cart</code> (Authenticated)</p>
+        <p><strong>Description:</strong> Buyers can add products to their cart.</p>
+        <div class="sample-input">
+            <h5>Sample Input:</h5>
+            <pre><code>{
+    "productId": 1,
+    "quantity": 2
+}</code></pre>
+        </div>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>{
+    "message": "Product added to cart"
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h4>Remove from Cart</h4>
+        <p><strong>Endpoint:</strong> <code>DELETE https://e-commerce-application-g88v.onrender.com/buyer/cart/:id</code> (Authenticated)</p>
+        <p><strong>Description:</strong> Buyers can remove products from their cart.</p>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>{
+    "message": "Product removed from cart"
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h4>View Cart Items</h4>
+        <p><strong>Endpoint:</strong> <code>GET https://e-commerce-application-g88v.onrender.com/buyer/cart</code> (Authenticated)</p>
+        <p><strong>Description:</strong> Buyers can view items in their cart.</p>
+        <div class="sample-output">
+            <h5>Sample Output:</h5>
+            <pre><code>[
+    {
+        "productId": 1,
+        "name": "Product Name",
+        "category": "Category",
+        "description": "Product Description",
+        "price": 99.99,
+        "discount": 10,
+        "quantity": 2
+    },
+    {
+        "productId": 2,
+        "name": "Another Product",
+        "category": "Category",
+        "description": "Another Product Description",
+        "price": 79.99,
+        "discount": 5,
+        "quantity": 1
+    }
+]</code></pre>
+        </div>
+    </div>
+</body>
+</html>

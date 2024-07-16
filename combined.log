@@ -102,3 +102,21 @@
 {"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 18:58:43"}
 {"level":"info","message":"Incoming request: GET /buyer/cart/","service":"user-service","timestamp":"2024-07-16 18:58:54"}
 {"level":"info","message":"Cart items retrieved for user 2","service":"user-service","timestamp":"2024-07-16 18:58:55"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 23:35:54"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:36:25"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:39:25"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:39:48"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:39:52"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:39:54"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 23:41:37"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:41:46"}
+{"level":"info","message":"Incoming request: GET /favicon.ico","service":"user-service","timestamp":"2024-07-16 23:41:46"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:46:07"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-16 23:56:10"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-16 23:56:23"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-17 00:07:33"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-17 00:07:51"}
+{"level":"error","message":"Unhandled error: [Error: ENOENT: no such file or directory, stat 'D:\\ecommerce-app\\public\\documnentaion.html'] {\n  errno: -4058,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: 'D:\\\\ecommerce-app\\\\public\\\\documnentaion.html',\n  expose: false,\n  statusCode: 404,\n  status: 404\n}","service":"user-service","timestamp":"2024-07-17 00:07:51"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-17 00:08:37"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-17 00:08:40"}
+{"level":"error","message":"Unhandled error: [Error: ENOENT: no such file or directory, stat 'D:\\ecommerce-app\\documnentaion.html'] {\n  errno: -4058,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: 'D:\\\\ecommerce-app\\\\documnentaion.html',\n  expose: false,\n  statusCode: 404,\n  status: 404\n}","service":"user-service","timestamp":"2024-07-17 00:08:40"}
