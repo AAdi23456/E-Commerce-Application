@@ -41,7 +41,7 @@ This is a simple e-commerce application with user authentication, built using No
 ### 1. Clone the repository
 
 ```sh
-git clone https://github.com/yourusername/ecommerce-app.git
+git clone https://github.com/AAdi23456/E-Commerce-Application
 cd ecommerce-app
 ```
 
