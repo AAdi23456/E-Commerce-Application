@@ -92,49 +92,204 @@ The server will start on `http://localhost:3000`.
 
 ### Authentication
 
-- **Sign-Up**: `POST /auth/signup`
-- **Login**: `POST /auth/login`
+#### Sign-Up
+
+- **Endpoint**: `POST https://e-commerce-application-g88v.onrender.com/auth/signup`
+- **Description**: Users can sign up as either a seller or a buyer.
+
+**Sample Input**:
+```json
+{
+  "username": "johndoe",
+  "email": "johndoe@example.com",
+  "password": "password123",
+  "role": "seller" // or "buyer"
+}
+```
+
+**Sample Output**:
+```json
+{
+  "message": "User registered successfully"
+}
+```
+
+#### Login
+
+- **Endpoint**: `POST https://e-commerce-application-g88v.onrender.com/auth/login`
+- **Description**: Users can log in to their account.
+
+**Sample Input**:
+```json
+{
+  "email": "johndoe@example.com",
+  "password": "password123"
+}
+```
+
+**Sample Output**:
+```json
+{
+  "token": "jwt_token_here"
+}
+```
 
 ### Seller Routes
 
-- **Add Product**: `POST /seller/products` (Authenticated)
-- **Edit Product**: `PUT /seller/products/:id` (Authenticated)
-- **Delete Product**: `DELETE /seller/products/:id` (Authenticated)
+#### Add Product
+
+- **Endpoint**: `POST https://e-commerce-application-g88v.onrender.com/seller/products` (Authenticated)
+- **Description**: Sellers can add new products.
+
+**Sample Input**:
+```json
+{
+  "name": "Product Name",
+  "category": "Category",
+  "description": "Product Description",
+  "price": 99.99,
+  "discount": 10
+}
+```
+
+**Sample Output**:
+```json
+{
+  "message": "Product created successfully"
+}
+```
+
+#### Edit Product
+
+- **Endpoint**: `PUT https://e-commerce-application-g88v.onrender.com/seller/products/:id` (Authenticated)
+- **Description**: Sellers can edit their existing products.
+
+**Sample Input**:
+```json
+{
+  "name": "Updated Product Name",
+  "category": "Updated Category",
+  "description": "Updated Product Description",
+  "price": 89.99,
+  "discount": 15
+}
+```
+
+**Sample Output**:
+```json
+{
+  "message": "Product updated successfully"
+}
+```
+
+#### Delete Product
+
+- **Endpoint**: `DELETE https://e-commerce-application-g88v.onrender.com/seller/products/:id` (Authenticated)
+- **Description**: Sellers can delete their products.
+
+**Sample Output**:
+```json
+{
+  "message": "Product deleted successfully"
+}
+```
 
 ### Buyer Routes
 
-- **Search Products**: `GET /buyer/products`
-- **Add to Cart**: `POST /buyer/cart` (Authenticated)
-- **Remove from Cart**: `DELETE /buyer/cart/:id` (Authenticated)
+#### Search Products
 
-## Directory Structure
+- **Endpoint**: `GET https://e-commerce-application-g88v.onrender.com/buyer/products`
+- **Description**: Buyers can search for products by name or category.
 
-```
-.
-├── prisma
-│   ├── migrations
-│   └── schema.prisma
-├── controllers
-│   ├── authController.js
-│   ├── sellerController.js
-│   └── buyerController.js
-├── middleware
-│   └── authMiddleware.js
-├── models
-│   └── User.js
-├── routes
-│   ├── authRoutes.js
-│   ├── sellerRoutes.js
-│   └── buyerRoutes.js
-├── .env
-├── app.js
-├── logger.js
-├── package.json
-└── README.md
+**Sample Input**:
+```json
+{
+  https://e-commerce-application-g88v.onrender.com/buyer/products?name=T-shirt
+}
 ```
 
-## Error Handling
+**Sample Output**:
+```json
+[
+  {
+    "id": 1,
+    "name": "Product Name",
+    "category": "Category",
+    "description": "Product Description",
+    "price": 99.99,
+    "discount": 10
+  },
+  {
+    "id": 2,
+    "name": "Another Product",
+    "category": "Category",
+    "description": "Another Product Description",
+    "price": 79.99,
+    "discount": 5
+  }
+]
+```
 
-The application provides meaningful and clear error messages for various scenarios such as invalid input, unauthorized access, and non-existent resources.
+#### Add to Cart
 
-# E-Commerce-Application
+- **Endpoint**: `POST https://e-commerce-application-g88v.onrender.com/buyer/cart` (Authenticated)
+- **Description**: Buyers can add products to their cart.
+
+**Sample Input**:
+```json
+{
+  "productId": 1,
+  "quantity": 2
+}
+```
+
+**Sample Output**:
+```json
+{
+  "message": "Product added to cart"
+}
+```
+
+#### Remove from Cart
+
+- **Endpoint**: `DELETE https://e-commerce-application-g88v.onrender.com/buyer/cart/:id` (Authenticated)
+- **Description**: Buyers can remove products from their cart.
+
+**Sample Output**:
+```json
+{
+  "message": "Product removed from cart"
+}
+```
+
+#### View Cart Items
+
+- **Endpoint**: `GET https://e-commerce-application-g88v.onrender.com/buyer/cart` (Authenticated)
+- **Description**: Buyers can view items in their cart.
+
+**Sample Output**:
+```json
+[
+  {
+    "productId": 1,
+    "name": "Product Name",
+    "category": "Category",
+    "description": "Product Description",
+    "price": 99.99,
+    "discount": 10,
+    "quantity": 2
+  },
+  {
+    "productId": 2,
+    "name": "Another Product",
+    "category": "Category",
+    "description": "Another Product Description",
+    "price": 79.99,
+    "discount": 5,
+    "quantity": 1
+  }
+]
+```
+
+## Getting Started
+
