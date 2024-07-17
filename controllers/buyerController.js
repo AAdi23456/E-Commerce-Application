@@ -3,14 +3,21 @@ const logger = require('../logger');
 
 const prisma = new PrismaClient();
 
+/**
+ * searchProducts - Function to search for products based on name and/or category
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
+
 const searchProducts = async (req, res) => {
   try {
     const { name, category } = req.query;
 
+     // Fetch products from the database that match the name and/or category criteria
     const products = await prisma.product.findMany({
       where: {
-        ...(name && { name: { contains: name, mode: 'insensitive' } }),
-        ...(category && { category: { contains: category, mode: 'insensitive' } }),
+        ...(name && { name: { contains: name, mode: 'insensitive' } }), // Case-insensitive search for name
+        ...(category && { category: { contains: category, mode: 'insensitive' } }), // Case-insensitive search for category
       },
     });
 
@@ -22,11 +29,18 @@ const searchProducts = async (req, res) => {
   }
 };
 
+/**
+ * addToCart - Function to add a product to the user's cart
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
+
 const addToCart = async (req, res) => {
   try {
     const { productId, quantity } = req.body;
     const buyerId = req.user.userId;
 
+ // Add product to the cart in the database
     const cart = await prisma.cart.create({
       data: {
         productId,
@@ -43,11 +57,17 @@ const addToCart = async (req, res) => {
   }
 };
 
+/**
+ * removeFromCart - Function to remove a product from the user's cart
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 const removeFromCart = async (req, res) => {
   try {
     const { id } = req.params;
     const buyerId = req.user.id;
 
+     // Delete the specified cart item from the database
     const cartItem = await prisma.cart.deleteMany({
       where: {
         id: Number(id),
@@ -66,16 +86,23 @@ const removeFromCart = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+
+/**
+ * getCartItems - Function to get all items in the user's cart
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 const getCartItems = async (req, res) => {
   try {
     const buyerId = req.user.userId;
 
+     // Fetch all cart items for the user from the database, including related product details
     const cartItems = await prisma.cart.findMany({
       where: {
         buyerId,
       },
       include: {
-        product: true, 
+        product: true, // Include related product details
       },
     });
 

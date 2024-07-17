@@ -3,11 +3,17 @@ const logger = require('../logger');
 
 const prisma = new PrismaClient();
 
+/**
+ * addProduct - Function to add a new product to the database
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 const addProduct = async (req, res) => {
   try {
     const { name, category, description, price, discount } = req.body;
-    const sellerId = req.user.userId; // Assuming user ID is available in req.user
+    const sellerId = req.user.userId; 
 
+    // Create a new product in the database
     const product = await prisma.product.create({
       data: {
         name,
@@ -27,12 +33,18 @@ const addProduct = async (req, res) => {
   }
 };
 
+/**
+ * editProduct - Function to edit an existing product in the database
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 const editProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const { name, category, description, price, discount } = req.body;
     const sellerId = req.user.userId;
 
+    // Update the product in the database
     const product = await prisma.product.updateMany({
       where: {
         id: Number(id),
@@ -59,11 +71,17 @@ const editProduct = async (req, res) => {
   }
 };
 
+/**
+ * deleteProduct - Function to delete a product from the database
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 const deleteProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const sellerId = req.user.id;
 
+     // Delete the product from the database
     const product = await prisma.product.deleteMany({
       where: {
         id: Number(id),

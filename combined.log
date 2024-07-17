@@ -120,3 +120,8 @@
 {"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-17 00:08:37"}
 {"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-17 00:08:40"}
 {"level":"error","message":"Unhandled error: [Error: ENOENT: no such file or directory, stat 'D:\\ecommerce-app\\documnentaion.html'] {\n  errno: -4058,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: 'D:\\\\ecommerce-app\\\\documnentaion.html',\n  expose: false,\n  statusCode: 404,\n  status: 404\n}","service":"user-service","timestamp":"2024-07-17 00:08:40"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service","timestamp":"2024-07-17 00:09:15"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-17 00:09:17"}
+{"level":"info","message":"Incoming request: GET /favicon.ico","service":"user-service","timestamp":"2024-07-17 00:09:18"}
+{"level":"info","message":"Incoming request: GET /","service":"user-service","timestamp":"2024-07-17 00:25:04"}
+{"level":"info","message":"Incoming request: GET /favicon.ico","service":"user-service","timestamp":"2024-07-17 00:25:04"}
